@@ -32,7 +32,7 @@ if(NOT EXISTS ${quickjs_extras_tar})
 endif()
 
 if (must_extract)
-	execute_process(COMMAND ${CMAKE_COMMAND} -E rm -rf ${quickjs_extract_dir})
+	execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory ${quickjs_extract_dir})
 	execute_process(COMMAND ${CMAKE_COMMAND} -E make_directory ${quickjs_extract_dir})
 	execute_process(
 		COMMAND ${CMAKE_COMMAND} -E tar xJ ${quickjs_tar}
