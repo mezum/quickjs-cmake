@@ -4,11 +4,11 @@
 cmake_minimum_required(VERSION 3.1)
 project(quickjs)
 
-set(quickjs_version 2020-01-05)
+set(quickjs_version 2020-01-19)
 set(quickjs_url https://bellard.org/quickjs/quickjs-${quickjs_version}.tar.xz)
-set(quickjs_sha1 5f6d100e7614ee8ee1d89dd51f902f4ab84bf892)
+set(quickjs_sha1 a33a7abb4471d566da39df90d0b688d120a8a2c4)
 set(quickjs_extras_url https://bellard.org/quickjs/quickjs-extras-${quickjs_version}.tar.xz)
-set(quickjs_extras_sha1 33df8073eca9a6be53584d835744bd9eac98f621)
+set(quickjs_extras_sha1 ae35cebc11f64e9c8bc97c53832607b0fe33953c)
 set(quickjs_extract_dir ${CMAKE_CURRENT_BINARY_DIR}/sources)
 set(quickjs_sources_root ${quickjs_extract_dir}/quickjs-${quickjs_version})
 set(quickjs_sources
