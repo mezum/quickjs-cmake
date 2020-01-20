@@ -31,6 +31,14 @@ if(NOT EXISTS ${quickjs_extras_tar})
 	set(must_extract TRUE)
 endif()
 
+foreach(source IN LISTS quickjs_sources)
+	if (NOT EXISTS ${source})
+		set(must_extract TRUE)
+		break()
+	endif()
+endforeach()
+
+
 if (must_extract)
 	execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory ${quickjs_extract_dir})
 	execute_process(COMMAND ${CMAKE_COMMAND} -E make_directory ${quickjs_extract_dir})
